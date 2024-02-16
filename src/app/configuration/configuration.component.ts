@@ -75,8 +75,9 @@ export class ConfigurationComponent implements OnInit {
             `'${featureKey}' has been toggled successfully to '${status}' for '${environment.name}'`,
             '',
             {
+              duration: 5000,
               horizontalPosition: 'end',
-              verticalPosition: 'top',
+              verticalPosition: 'bottom',
             }
           );
         }

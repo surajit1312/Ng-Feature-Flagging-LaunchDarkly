@@ -62,3 +62,7 @@ mat-expansion-panel-header,
 mat-expansion-panel-header:hover {
   background-color: #d4d4d4;
 }
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  background-color: deeppink !important;
+}
