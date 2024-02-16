@@ -1,0 +1,19 @@
+<div class="table-container">
+  <mat-tab-group color="primary" backgroundColor="accent">
+    <mat-tab label="Fourth">
+      <div class="tab-content">
+        <div class="tab-text">Content 4</div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Fifth" *ngIf="isAdmin">
+      <div class="tab-content">
+        <div class="tab-text">Content 5</div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Sixth">
+      <div class="tab-content">
+        <div class="tab-text">Content 6</div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

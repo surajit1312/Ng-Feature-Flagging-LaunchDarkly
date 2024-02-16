@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Feature Flag</span>
+  <span class="example-spacer"></span>
+  <button mat-flat-button color="primary">
+    <a class="menu-item" routerLink="/home" routerLinkActive="active">Home</a>
+  </button>
+  <button mat-flat-button color="primary">
+    <a class="menu-item" routerLink="/about" routerLinkActive="active">About</a>
+  </button>
+  <button mat-flat-button color="primary" *ngIf="isAccessible">
+    <a class="menu-item" routerLink="/secret" routerLinkActive="active"
+      >Secret</a
+    >
+  </button>
+  <button mat-flat-button color="primary" *ngIf="isAdmin">
+    <a class="menu-item" routerLink="/configuration" routerLinkActive="active"
+      >Configuration</a
+    >
+  </button>
+</mat-toolbar>
+<router-outlet></router-outlet>

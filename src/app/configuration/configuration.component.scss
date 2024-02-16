@@ -1,0 +1,43 @@
+.panel-title {
+  width: 75rem;
+}
+
+.panel-key {
+  float: left;
+  font-weight: 600;
+  color: blueviolet;
+
+  div {
+    margin: 15px 50px;
+    color: crimson;
+    font-weight: 500;
+  }
+}
+
+.panel-value {
+  float: right;
+}
+
+ul.list-rules > li {
+  margin-bottom: 5rem;
+  list-style-type: disclosure-open;
+}
+
+ul.list-env {
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    padding: 10px 40px;
+  }
+}
+
+.panel-field-header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.slider-label {
+  display: inline-block;
+  min-width: 10rem;
+}

@@ -1,0 +1,51 @@
+<div class="table-container">
+  <mat-accordion color="primary">
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+      *ngFor="let feature of features"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div class="panel-title">
+            <span class="panel-key"> Key: {{ feature?.key }} </span>
+          </div>
+        </mat-panel-title>
+        <mat-panel-description></mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="panel-field-header">Environments:</div>
+      <ul class="list-env">
+        <li
+          *ngFor="let environment of feature?.rules?.environments; index as i"
+        >
+          <div>
+            <div class="panel-key">
+              <label class="slider-label">{{ environment.name }}</label>
+              <mat-slide-toggle
+                class="example-margin"
+                [color]="'blue'"
+                [checked]="environment.kind"
+                [disabled]="false"
+                (change)="toggleFeature($event, environment, feature.key)"
+              >
+              </mat-slide-toggle>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="panel-field-header">Variations:</div>
+      <ul class="list-rules">
+        <li *ngFor="let rule of feature?.rules?.variations; index as i">
+          <div>
+            <div class="panel-key">
+              Rule {{ i + 1 }}: {{ rule.name }}
+              <div class="code">
+                {{ json(rule.value) }}
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
